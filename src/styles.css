@@ -1,2 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss";
+@plugin "tailwindcss-primeui";
+
+@theme {
+  --color-background: #1e1e1e;
+  --color-purple-1: #bc2dff;
+  --font-family-inter: "Inter", sans-serif;
+}
+
+html,
+body {
+  @apply bg-background font-family-inter max-w-7xl mx-auto h-screen;
+}
