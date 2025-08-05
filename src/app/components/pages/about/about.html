@@ -1,0 +1,37 @@
+<main class="text-black bg-white pb-30">
+  <div class="">
+    <img src="/tablet.png" alt="Imagem background" />
+  </div>
+  <div id="1" class="relative -mt-36 mx-auto z-10">
+    <div class="bg-[url('/white-rectangle.svg')] bg-cover bg-no-repeat flex flex-col items-center pt-30">
+      <h1 class="text-[40px] text-gray-500 font-semibold mb-8">Sobre nós</h1>
+      <div class="flex flex-col items-center px-56">
+        <h2 class="text-5xl font-bold text-center mb-14">Cuidando do digital da sua empresa
+          como se fosse nossa</h2>
+        <div class="flex flex-row w-full items-center justify-around">
+          <button (click)="setActiveTab('empresa')" [ngClass]="{ 'after:scale-x-100': activeTab === 'empresa' }" class=" relative font-semibold text-3xl cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-[-5px] 
+                           after:h-[2px] after:w-full after:bg-purple-1 
+                           after:scale-x-0 after:origin-center after:transition-transform after:duration-300 
+                           hover:after:scale-x-100">Nossa empresa</button>
+          <button (click)="setActiveTab('imprensa')" [ngClass]="{ 'after:scale-x-100': activeTab === 'imprensa' }" class="relative font-semibold text-3xl cursor-pointer after:content-[''] after:absolute after:left-0 after:bottom-[-5px] 
+                           after:h-[2px] after:w-full after:bg-purple-1 
+                           after:scale-x-0 after:origin-center after:transition-transform after:duration-300 
+                           hover:after:scale-x-100">Imprensa</button>
+        </div>
+        <div class="mt-22" *ngIf="activeTab === 'empresa'">
+          <h1 class="text-4xl font-bold mb-10">Expert Social Media</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, cupiditate veniam voluptates debitis iusto assumenda labore mollitia numquam! Id iste earum ad nam dolorum, sapiente adipisci. Cumque possimus quisquam facilis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique tempora consectetur sint hic aliquam consequuntur repudiandae eaque. Magni necessitatibus quia illo totam, modi incidunt doloribus autem! Amet magni velit minus!</p>
+          <p class="font-medium text-2xl mt-9">Bem-Vindo!</p>
+        </div>
+        <div class="mt-22" *ngIf="activeTab === 'imprensa'">
+          <h1 class="text-4xl font-bold mb-10">Nossas Aparições na Imprensa</h1>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque, sint! Et, deserunt quae. Iusto sequi eos deleniti quas provident, ab non expedita alias rem! Commodi temporibus voluptatem reiciendis consequatur sequi. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit, nulla distinctio! Aliquid temporibus dolores atque! Sit saepe hic, voluptates quisquam doloremque quaerat. Numquam omnis corrupti repudiandae illum quidem sint perspiciatis!</p>
+          <p class="font-medium text-2xl mt-9">Acompanhe nossas notícias!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</main>
