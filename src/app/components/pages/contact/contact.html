@@ -1,43 +1,48 @@
 <main class="flex flex-col min-h-screen">
-  <div class="flex flex-col items-center justify-center gap-10 p-10">
-    <div class="px-20">
-      <h1 class="font-medium text-5xl text-center">Escolha um dos nossos canais para falar
+  <div class="flex flex-col items-center justify-center gap-10 p-5 sm:p-10">
+    <div class="sm:px-20">
+      <h1 class="font-medium text-3xl sm:text-5xl text-center">Escolha um dos nossos canais para falar
         com um especialista</h1>
     </div>
-    <div class="flex flex-row items-center justify-center gap-24">
+    <div class="flex flex-row items-center justify-center gap-4 sm:gap-24">
       <button (click)="setActiveTab('wpp')" [ngClass]="{
         'bg-purple-1': activeTab !== 'wpp',
         'bg-gray-300': activeTab === 'wpp'
-      }" class="rounded-full p-6 transition-colors duration-300 cursor-pointer">
+      }" class="rounded-full p-5 sm:p-6 transition-colors duration-300 cursor-pointer">
         <img [src]="activeTab === 'wpp' ? '/purple-wpp.svg' : '/gray-wpp.svg'" alt="WhatsApp Icon">
       </button>
       <button (click)="setActiveTab('phone')" [ngClass]="{
         'bg-purple-1': activeTab !== 'phone',
         'bg-gray-300': activeTab === 'phone'
-      }" class="rounded-full p-6 transition-colors duration-300 cursor-pointer">
+      }" class="rounded-full p-5 sm:p-6 transition-colors duration-300 cursor-pointer">
         <img [src]="activeTab === 'phone' ? '/purple-phone.svg' : '/gray-phone.svg'" alt="Phone Icon">
       </button>
       <button (click)="setActiveTab('sms')" [ngClass]="{
         'bg-purple-1': activeTab !== 'sms',
         'bg-gray-300': activeTab === 'sms'
-      }" class="rounded-full p-6 transition-colors duration-300 cursor-pointer">
+      }" class="rounded-full p-5 sm:p-6 transition-colors duration-300 cursor-pointer">
         <img [src]="activeTab === 'sms' ? '/purple-sms.svg' : '/gray-sms.svg'" alt="Sms Icon">
       </button>
       <button (click)="setActiveTab('email')" [ngClass]="{
         'bg-purple-1': activeTab !== 'email',
         'bg-gray-300': activeTab === 'email'
-      }" class="rounded-full p-6 transition-colors duration-300 cursor-pointer">
+      }" class="rounded-full p-5 sm:p-6 transition-colors duration-300 cursor-pointer">
         <img [src]="activeTab === 'email' ? '/purple-email.svg' : '/gray-email.svg'" alt="Email Icon">
       </button>
     </div>
   </div>
-  <div class="relative flex-grow flex justify-center items-center h-[80vh] mb-10">
+  <div class="relative flex-grow flex justify-center items-center py-24 mb-10">
     <div class="absolute inset-0 z-0 bg-[url('/bg2.png')] bg-cover bg-center bg-no-repeat"></div>
-    <div class="relative z-10">
-      <app-wpp *ngIf="activeTab === 'wpp'"></app-wpp>
-      <app-phone *ngIf="activeTab === 'phone'"></app-phone>
-      <app-sms *ngIf="activeTab === 'sms'"></app-sms>
-      <app-email *ngIf="activeTab === 'email'"></app-email>
+    <div class="relative z-10 w-full max-w-5xl px-4">
+      @if (activeTab === 'wpp') {
+      <app-wpp></app-wpp>
+      } @else if (activeTab === 'phone') {
+      <app-phone></app-phone>
+      } @else if (activeTab === 'sms') {
+      <app-sms></app-sms>
+      } @else{
+      <app-email></app-email>
+      }
     </div>
   </div>
 </main>
