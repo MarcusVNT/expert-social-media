@@ -1,25 +1,25 @@
 <div class="flex flex-col items-center text-black">
-  <h2 class="text-3xl font-bold mb-10">E-mail</h2>
-  <form>
-    <div class="flex flex-row items-center gap-48 mt-8">
-      <div>
+  <h2 class="text-3xl font-bold mt-12 sm:mb-10">E-mail</h2>
+  <form class="w-full max-w-4xl">
+    <div class="flex flex-col lg:flex-row items-center lg:gap-40 mt-4 lg:mt-8">
+      <div class="w-full">
         <label for="name" class="block text-gray-700 text-sm font-bold">Seu nome</label>
-        <input id="name" type="text" placeholder="Digite seu nome..." class=" bg-[#ebebeb] border border-gray-300 rounded-[12px] p-2 w-80 text-gray-600 focus:outline-none focus:ring-1 focus:ring-purple-1 mb-4 placeholder:text-gray-400 placeholder:italic">
+        <input id="name" type="text" placeholder="Digite seu nome..." class=" bg-[#ebebeb] border border-gray-300 rounded-[12px] p-2 w-full text-gray-600 focus:outline-none focus:ring-1 focus:ring-purple-1 mb-4 placeholder:text-gray-400 placeholder:italic">
       </div>
-      <div>
+      <div class="w-full">
         <label for="email" class="block text-gray-700 text-sm font-bold">Seu e-mail</label>
-        <input id="email" type="text" placeholder="Digite seu e-mail..." class="bg-[#ebebeb] border border-gray-300 rounded-[12px] p-2 w-80 text-gray-600 focus:outline-none focus:ring-1 focus:ring-purple-1 mb-4 placeholder:text-gray-400 placeholder:italic">
+        <input id="email" type="text" placeholder="Digite seu e-mail..." class="bg-[#ebebeb] border border-gray-300 rounded-[12px] w-full p-2 text-gray-600 focus:outline-none focus:ring-1 focus:ring-purple-1 mb-4 placeholder:text-gray-400 placeholder:italic">
       </div>
     </div>
     <div>
       <label for="text-message" class="block text-gray-700 text-sm font-bold">Deixe aqui sua mensagem</label>
-      <textarea type="text" id="text-message" placeholder="Digite sua mensagem..." class="bg-[#ebebeb] border border-gray-300 rounded-[12px] p-2 w-full h-60 text-gray-600 focus:outline-none focus:ring-1 focus:ring-purple-1  placeholder:text-gray-400 placeholder:italic"></textarea>
+      <textarea type="text" id="text-message" placeholder="Digite sua mensagem..." class="bg-[#ebebeb] border border-gray-300 rounded-[12px] p-2 w-full h-30 sm:h-60 text-gray-600 focus:outline-none focus:ring-1 focus:ring-purple-1  placeholder:text-gray-400 placeholder:italic"></textarea>
     </div>
     <div class="flex justify-center">
       <p class="font-medium text-sm italic text-background">o prazo para resposta leva em média 24 horas úteis.</p>
     </div>
-    <div class="flex justify-end">
-      <button type="submit" class="bg-purple-1 py-3 px-12 rounded-[20px] text-white text-3xl font-bold shadow-[0_4px_4px_rgba(0,0,0,0.25)] cursor-pointer transition-colors duration-300 hover:bg-purple-500">Enviar</button>
+    <div class="flex justify-center sm:justify-end mt-4">
+      <button type="submit" class="bg-purple-1 py-3 px-6 sm:px-12 rounded-[20px] text-white text-xl sm:text-3xl font-bold shadow-[0_4px_4px_rgba(0,0,0,0.25)] cursor-pointer transition-colors duration-300 hover:bg-purple-500">Enviar</button>
     </div>
   </form>
 </div>
